@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handwriting Classifier</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+    <style>
+        .button-container {
+            position: absolute;
+            top: 500px;
+            left: 100px;
+            display: flex;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Handwriting Classifier</h1>
+    <canvas id="canvas" width="280" height="280" style="position:absolute;top:100px;left:100px;border:8px solid;"></canvas>
+    <div class="button-container">
+        <input type="button" value="Clear" id="cb">
+        <input type="button" value="Save Image" id="saveImageBtn">
+        <input type="button" value="Classify" id="classifyBtn">
+    </div>
+</body>
+</html>
